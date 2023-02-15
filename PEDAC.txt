@@ -1,0 +1,53 @@
+Once the program starts, you should display a greeting to the user describing the challenge.
+Ask the user to think of a number between 1 and 1024.
+Do NOT prompt the user for their number. Your program will guess the number IN THEIR MIND
+Prompt the user with your guess and allow them to tell you if their number is higher, lower, or correct.
+Keep refining your guess until you have the correct answer.
+Use methods to organize your code. Here are some suggestions for methods you might use:
+ShowGreeting
+ComputeNewLowIfTooLow
+ComputeNewHighIfTooHigh
+BragWhenCorrect
+Use at least one or two methods
+
+Problem:
+There should be a greeting, and then the console should
+display a question, asking for a number within range 1 to 1024. 
+No user input is needed here. The program should guess a number
+and then ask if the guess is higher or lower than the user's number.
+If the answer is higher, the lower limit of the next guess should be
+1 above on the next guess. If the answer is lower, the upper limit
+of the next guess should be 1 less. The guesses should divide the
+available range in half to quickly zero in on the user's guess.
+If the answer is correct, the program should congratulate itself.
+
+Examples:
+range 1-3, user number is 3. Program guesses 2, user says higher
+program guesses 3, uses says correct
+
+range 1-1024, user number is 1. Program guesses 512, uses says lower
+program guesses 256, user says lower
+program guesses 128, user says lower
+program guesses 64, user says lower
+program guesses 32, user says lower
+program guesses 16, user says lower
+program guesses 8, user says lower
+program guesses 4, user says lower
+program guesses 2, user says lower
+programs guesses 1, user says correct
+
+Data Structures:
+looping the guessing
+upper guess range
+lower guess range
+user input of higher, lower, correct
+
+Algorithm:
+1. Display a greeting
+2. Ask the user to think of a number between 1(lower limit) and
+   1024(upper limit)
+3. Begin guessing at (upper limit + lower limit + 1)/2 = 512
+4. If user input is higher, the new lower limit is + 1 
+5. If user input is lower, the new upper limit is -1 
+6. Continue shrinking the ranges of program guesses in this way
+  until a correct answer is guessed.
